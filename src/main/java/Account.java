@@ -25,10 +25,26 @@ public class Account {
             System.out.println("You should use whitespaces between name and surname");
             return checkResult = false;
         }
+        else if(countWhitespaces(checkName)>1){
+            System.out.println("Name should have only 1 whitespace between firstname and lastname");
+            return checkResult = false;
+        }
         return checkResult;
     }
 
+    public Integer countWhitespaces(String checkName) {
+        int k = 0;
+        for (int i = 0; i < checkName.length(); i++) {
+            if (checkName.substring(i,i+1).contains(" ")) k++;
+        }
+        return k;
+    }
+
 }
+
+
+
+
 
 
 

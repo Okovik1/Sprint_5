@@ -26,7 +26,7 @@ public class ValidationNameTest {
                 {"Mike Smith ", false},
                 {"MikeSmith ", false},
                 {"Mike SmithMike Smith", false},
-                {"Mike SmithMike Smi", true},
+                {"Mike SmithMike Smi", false},
         };
     }
 
