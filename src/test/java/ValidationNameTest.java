@@ -21,17 +21,20 @@ public class ValidationNameTest {
         return new Object[][]{
                 {"Mike Smith", true},
                 {"Mik", false},
+                {"Mi k", true},
                 {"Mi", false},
                 {" Mike Smith", false},
                 {"Mike Smith ", false},
                 {"MikeSmith ", false},
                 {"Mike SmithMike Smith", false},
                 {"Mike SmithMike Smi", false},
+                {"Mike SmithMikeSmith", true},
+                {null, false}
         };
     }
 
     @Test
-    public void validationNameTest(){
+    public void validationNameTest() {
         Account account = new Account(NAME);
         boolean result = account.checkNameToEmboss(NAME);
         assertEquals(EXPECTED, result);

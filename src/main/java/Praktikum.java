@@ -1,7 +1,7 @@
 public class Praktikum {
     public static void main(String[] args) {
 
-        String name = "nickff ffnic ";
+        String name = "nickff ffnic";
 
         Account account = new Account(name);
         account.checkNameToEmboss(name);
